@@ -1,9 +1,12 @@
  /* **************************************************************************
    Objetivo: Que el programa pida 3 datos al usuario y muestre su información
- **************************************************************************
+ *****************************************************************************
  */
 
 import java.util.Scanner;
+
+import utilidades.ProcesadorTexto;
+import utilidades.Usuario;
 
 public class DataUsuario {
     public static void main(String[] args) {
@@ -11,17 +14,41 @@ public class DataUsuario {
         Scanner sc = new Scanner(System.in);
 
         // Pedirá tu nombre de usuario:
+        System.out.print("Introduce tu usuario: " );
         String nombreUsuario = sc.nextLine();
-        System.out.println("Introduce tu usuario: " + nombreUsuario );
 
         // Pedirá tu edad de usuario:
+        System.out.print("Introduce tu edad: ");
         int edadUsuario = sc.nextInt();
-        System.out.println("Introduce tu edad: " + edadUsuario);
+
+        sc.nextLine(); // Esto sirve para evitar el conflicto entre nextInt y nextLine
 
         // Pedirá tu correo de usuario:
+        System.out.print("Introduce tu correo de usuario: ");
         String correoUsuario = sc.nextLine();
-        System.out.println("Introduce tu correo de usuario: " + correoUsuario);
 
-        sc.close();
-    }
+        // Uso del método estático para comprobar si el correo es válido:
+          boolean emailValido = ProcesadorTexto.esEmailValido(correoUsuario);
+          
+
+        // Uso de la condición if-else
+          if (emailValido){
+
+            Usuario usuario = new Usuario(nombreUsuario, edadUsuario, correoUsuario);
+            usuario.mostrarInformacion(); // Este hace que dé el resultado total de los datos recogidos del Scanner
+  
+          } else{
+            System.out.println("El usuario no puede ser creado porque el email introducido no es válido");
+          }
+
+            sc.close();
+            
+          }
+
+          
+
+      
+          
+  
+  
 }
