@@ -1,3 +1,6 @@
+import utilidades.Cancion;
+import utilidades.Pelicula;
+
 public class InstanciacionReferenciaYComparacion {
     public static void main(String[] args) {
 
@@ -13,7 +16,10 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
-            
+            Cancion c1 = new Cancion();
+            Cancion c2 = new Cancion("Clocks","Coldplay");
+
+            System.out.println(c1 == c2);
 
         // ================================
         // EJERCICIO 2: Comparación con ==
@@ -24,6 +30,12 @@ public class InstanciacionReferenciaYComparacion {
         // 3. Piensa: ¿por qué da false aunque los datos sean iguales?
 
         // Tu código aquí ↓
+
+            //Cancion c3 = new Cancion("Tengo la camisa negra","Juanes");
+            //Cancion c4 = new Cancion("Tengo la camisa negra","Juanes");
+
+            //System.out.println(c3 == c4);
+            //Respuesta: Sale false debido a que al usar "new" se crea dos objetos diferentes.
 
         // ================================
         // EJERCICIO 3: Comparación con equals()
@@ -36,6 +48,15 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
+            Cancion c3 = new Cancion("Tengo la camisa negra","Juanes");
+            Cancion c4 = new Cancion("Tengo la camisa negra","Juanes");
+            
+            System.out.println(c3 == c4); // false poruqe no son el mismo objeto
+            System.out.println(c3.equals(c4)); 
+            // RESPUESTA: Aquí se estás sobreescribiendo el contenido de c3 en c4 lo 
+            // que hace que de true al tener el mismo contenido de los objetos
+           
+
         // ================================
         // EJERCICIO 4: Comparación en Pelicula
         // ================================
@@ -47,6 +68,13 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Pregunta: ¿por qué en Pelicula equals no funciona como en Cancion?
 
         // Tu código aquí ↓
+
+            Pelicula p1 = new Pelicula("Transformers", 2007);
+            Pelicula p2 = new Pelicula("Transformers", 2007);
+
+            System.out.println(p1 == p2);
+            System.out.println(p1.equals(p2));
+            //RESPUESTA: Aquí, al igual que en la canción, se sobreescribio el contenido de los objetos
 
         // ================================
         // EJERCICIO 5: Referencias
