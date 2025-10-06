@@ -14,7 +14,7 @@ public class InstanciacionReferenciaYComparacion {
         // 4. Observa qué valores se imprimen en cada caso.
         // ¿Qué diferencia hay entre el constructor por defecto y el parametrizado?
 
-        // Tu código aquí ↓
+        // Tu código aquí 
 
             Cancion c1 = new Cancion();
             Cancion c2 = new Cancion("Clocks","Coldplay");
@@ -51,10 +51,10 @@ public class InstanciacionReferenciaYComparacion {
             Cancion c3 = new Cancion("Tengo la camisa negra","Juanes");
             Cancion c4 = new Cancion("Tengo la camisa negra","Juanes");
             
-            System.out.println(c3 == c4); // false poruqe no son el mismo objeto
+            System.out.println(c3 == c4); // false porque no son el mismo objeto
             System.out.println(c3.equals(c4)); 
             // RESPUESTA: Aquí se estás sobreescribiendo el contenido de c3 en c4 lo 
-            // que hace que de true al tener el mismo contenido de los objetos
+            // que hace que dé true al tener el mismo contenido de los objetos
            
 
         // ================================
@@ -74,7 +74,6 @@ public class InstanciacionReferenciaYComparacion {
 
             System.out.println(p1 == p2);
             System.out.println(p1.equals(p2));
-            //RESPUESTA: Aquí, al igual que en la canción, se sobreescribio el contenido de los objetos
 
         // ================================
         // EJERCICIO 5: Referencias
@@ -90,6 +89,18 @@ public class InstanciacionReferenciaYComparacion {
 
         // Tu código aquí ↓
 
+            Cancion c5 = new Cancion("Thriller","Michael Jackson's");
+            Cancion c6 = new Cancion("Thriller", "Michael Jackson's");
+
+            System.out.println(c5 == c6);
+            System.out.println(c5.equals(c6));
+            c6.setTitutlo("Tren al Sur");
+            System.out.println(c5);
+            //RESPUESTA: Al correr java el programa imprime el título de la canción c5
+            
+
+
+
         // ================================
         // EJERCICIO 6: null
         // ================================
@@ -101,6 +112,40 @@ public class InstanciacionReferenciaYComparacion {
         // 5. Explica: ¿qué significa realmente que una variable valga null?
 
         // Tu código aquí ↓
+
+            Pelicula p3 = null;
+            System.out.println(p3);
+            p3.getTitulo();
+
+        
+        // ================================
+        // RESPUESTAS DE REFLEXIÓN
+        // ================================
+        // Ejercicio 1: ¿Qué diferencia hay entre el constructor por defecto y el parametrizado?
+        // Respuesta: El constructor por defecto no lee ningún dato o parámetro dentro del objeto pero el parametrizado lee los datos específicos que se agregan en el objeto
+
+        // Ejercicio 2: ¿Por qué da false al comparar con == dos objetos con los mismos datos?
+        // Respuesta: Porque estos comparan las referencias de los objetos, pero no el contenido interno.
+
+        // Ejercicio 3: ¿Qué diferencia hay entre == y equals()? ¿Por qué ahora sí devuelve true?
+        // Respuesta:
+        // No hay diferencia entre == y equals() ya que ambos comparan referencias por defecto.
+        //Que por defecto el == y equals() compara referencias de objetos, es decir, si apuntan al mismo lugar en memoria. Pero si se sobreescribe el método equals(),este puede comparar los contenidos de los objetos.
+
+        // Ejercicio 4: ¿Por qué en Pelicula equals no funciona como en Cancion?
+        // Respuesta: Porque en película el equals está por defecto que solo lee las referencias de los objetos, pero en canción fue sobreescrito el método equals de modo que puede
+                    // leer el contenido también
+
+        // Ejercicio 5: ¿Qué ocurre cuando modificas el objeto a través de c6? ¿Qué demuestra?
+        // Respuesta: Que al modificar el contenido del objeto c6, este cambia el contenido original y se reemplaza por la nueva.
+
+        // Ejercicio 6: 
+        //¿Qué error aparece al acceder a un método de p3 siendo null?
+        /* Exception in thread "main" java.lang.NullPointerException: Cannot invoke "utilidades.Pelicula.getTitulo()" because "p3" is null */
+        /* at I nstanciacionReferenciaYComparacion.main(InstanciacionReferenciaYComparacion.java:119) */    
+
+        // ¿Qué significa realmente que una variable valga null?
+        // Respuesta: La variable null no apunta a ningún objeto.
 
     }
 }
