@@ -3,6 +3,7 @@ package utilidades;
 public class CuentaBancaria {
     // Atributo privado → solo accesible dentro de la clase
     private double saldo;
+  
 
     // Método público → disponible para todos
     public void depositar(double cantidad) {
@@ -28,7 +29,7 @@ public class CuentaBancaria {
     }
 
     // Método privado → solo lo usa la propia clase
-    private void registrarOperacion(String tipo, double cantidad) {
+     private void registrarOperacion(String tipo, double cantidad) {
         System.out.println("Operación interna: " + tipo + " de " + cantidad + "€");
     }
 }

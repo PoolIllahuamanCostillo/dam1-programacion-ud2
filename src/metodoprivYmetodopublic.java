@@ -38,7 +38,7 @@ public class metodoprivYmetodopublic {
 
         // Tu código aquí ↓
 
-            cuenta.registrarOperacion("Hackeo",9999);
+            //cuenta.registrarOperacion("Hackeo",9999); 
         
 
         // ================================
@@ -46,8 +46,20 @@ public class metodoprivYmetodopublic {
         // ================================
         // Puedes hacer pruebas adicionales con los métodos disponibles
         // para asegurarte de que comprendes la diferencia entre public y private.
+
+        cuenta.depositar(500);
+        cuenta.retirar(200);
+        System.out.println(cuenta.getSaldo());
+
+        //Private
+            //System.out.println(saldo);
+   
+   
     }
 }
+
+}
+
 
 // ================================
 // RESPUESTAS DE REFLEXIÓN
@@ -59,11 +71,19 @@ public class metodoprivYmetodopublic {
 // Respuesta: Porque los tres métodos están en públicos.
 
 // Ejercicio 3: ¿qué significa el error al intentar llamar a registrarOperacion()?
-// Respuesta: ....................................................
+// Respuesta: Es debido a que el método que se está llamando es privada.
 
 // Ejercicio 4: 
 // - ¿Qué ventajas tiene que saldo sea private?
+
+    //RESPUESTA: Es para evitar la exposición de datos sensibles dentro del programa.
+
 // - ¿Qué pasaría si saldo fuera public?
+
+    //RESPUESTA: Se podría llamar al método "cuenta.saldo" y se vería el saldo actual que se tiene registrado.
+
 // - ¿Por qué registrarOperacion es private en lugar de public?
-// Respuesta: ....................................................
-}
+
+    //RESPUESTA: Porque es un método que solo se necesita usar dentro de la misma clase. 
+
+
