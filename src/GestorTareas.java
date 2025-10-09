@@ -103,6 +103,7 @@ public class GestorTareas {
         System.out.println(c + " minutos" );
         return c;
         
+        // PROFE , ¿ ESTE ES LO QUE PIDE DEL "EJERCICIO 2"? 
     
     }
 }
