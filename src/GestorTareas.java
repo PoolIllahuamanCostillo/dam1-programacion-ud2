@@ -1,59 +1,21 @@
-import java.util.Scanner;
-
 public class GestorTareas {
-
     public static void main(String[] args) {
 
-        // ================================
-        // EJERCICIO 1: Bienvenida
-        // ================================
-        // Crea un método llamado que muestre un mensaje de bienvenida al programa.
-        // No necesita devolver nada, solo imprimir por consola.
-
-        // Tu código aquí ↓
+        // EJERCICIO 1: Tu código aquí ↓
 
         mostrarBienvenida(); // Llamada al método de bienvenida
 
-        // ================================
-        // EJERCICIO 2: Duración total
-        // ================================
-        // Crea un método que reciba la duración (en minutos) de dos tareas
-        // y devuelva el total de minutos.
-        // Llama al método con 45 y 30 y muestra el resultado en consola.
+        // EJERCICIO 2: Tu código aquí ↓
+        suma(45, 30); // Lama al métdodo suma
 
-        // Tu código aquí ↓
+        // EJERCICIO 3: Tu código aquí ↓
+        conversor(150); // Llama al método conversor
 
-        mostrarDuración(); // Llama al método de Duración
+        // EJERCICIO 4: Tu código aquí ↓
+        recordatorio("Revisar Correo", 2); // Lama al método recordatorio
 
-        // ================================
-        // EJERCICIO 3: Conversión de tiempo
-        // ================================
-        // Crea un método que reciba una cantidad de minutos
-        // y muestre en pantalla cuántas horas y minutos son.
-        // Ejemplo: 150 minutos → "Son 2 horas y 30 minutos".
-        // No tiene que devolver nada.
+        // EJERCICIO 5: Tu código aquí ↓
 
-        // Tu código aquí ↓
-
-        // ================================
-        // EJERCICIO 4: Recordatorios
-        // ================================
-        // Crea un método que reciba el nombre de una tarea y una prioridad (1–3)
-        // y muestre un mensaje como:
-        // "📌 [Prioridad 2] Revisar correo".
-        // Solo muestra el mensaje, no devuelve nada.
-
-        // Tu código aquí ↓
-
-        // ================================
-        // EJERCICIO 5: Estado de tareas
-        // ================================
-        // Crea un método que reciba un valor booleano que indique si la tarea está
-        // completada.
-        // Debe devolver un texto: "✅ Completada" o "⏳ Pendiente".
-        // Muestra el resultado de llamar al método con ambos casos.
-
-        // Tu código aquí ↓
 
         // ================================
         // EJERCICIO 6: Productividad
@@ -88,24 +50,69 @@ public class GestorTareas {
 
     }
 
-   // Aquí debéis crear los métodos fuera del main ↓↓↓
+    // Aquí debéis crear los métodos fuera del main ↓↓↓
+
+    // ================================
+    // EJERCICIO 1: Bienvenida
+    // ================================
+    // Crea un método llamado que muestre un mensaje de bienvenida al programa.
+    // No necesita devolver nada, solo imprimir por consola.
+
     public static void mostrarBienvenida() {
         System.out.println("¡Bienvenido al programa!");
     }
 
-    public static int mostrarDuración(){
-        
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = a +b;
-
-        System.out.println(c + " minutos" );
-        return c;
-        
-        // PROFE , ¿ ESTE ES LO QUE PIDE DEL "EJERCICIO 2"? 
-    
+    // ================================
+    // EJERCICIO 2: Duración total
+    // ================================
+    // Crea un método que reciba la duración (en minutos) de dos tareas
+    // y devuelva el total de minutos.
+    // Llama al método con 45 y 30 y muestra el resultado en consola.
+    public static int suma(int a, int b) {
+        int suma = a + b;
+        System.out.println("El resulado es: " + suma );
+        return suma;
     }
-}
+
+    // ================================
+    // EJERCICIO 3: Conversión de tiempo
+    // ================================
+    // Crea un método que reciba una cantidad de minutos
+    // y muestre en pantalla cuántas horas y minutos son.
+    // Ejemplo: 150 minutos → "Son 2 horas y 30 minutos".
+    // No tiene que devolver nada.
+    public static void conversor(int minutos) {
+        int horas = minutos / 60;
+        int tiemporestante = minutos % 60;
+        System.out.println(horas + " horas " + tiemporestante + " minutos");
+    }
+
+    // ================================
+    // EJERCICIO 4: Recordatorios
+    // ================================
+    // Crea un método que reciba el nombre de una tarea y una prioridad (1–3)
+    // y muestre un mensaje como:
+    // "📌 [Prioridad 2] Revisar correo".
+    // Solo muestra el mensaje, no devuelve nada.
+
+    public static void recordatorio(String tarea, int prioridad){
+        System.out.println("Prioridad "+ prioridad + ": " + tarea);
+    }
+        
+    
+
+    // ================================
+    // EJERCICIO 5: Estado de tareas
+    // ================================
+    // Crea un método que reciba un valor booleano que indique si la tarea está
+    // completada.
+    // Debe devolver un texto: "✅ Completada" o "⏳ Pendiente".
+    // Muestra el resultado de llamar al método con ambos casos.
+    public static void estadoTarea(boolean completada){
+        
+    }
+
+}       
+
 
 
