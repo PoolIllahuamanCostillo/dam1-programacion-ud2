@@ -16,7 +16,8 @@ public class GestorTareas {
 
         // EJERCICIO 5: Tu código aquí ↓
 
-
+        estadoTarea(true);
+        
         // ================================
         // EJERCICIO 6: Productividad
         // ================================
@@ -49,6 +50,10 @@ public class GestorTareas {
         // Tu código aquí ↓
 
     }
+
+    /* ********************************************************************************
+     * ********************************************************************************
+     */
 
     // Aquí debéis crear los métodos fuera del main ↓↓↓
 
@@ -108,9 +113,14 @@ public class GestorTareas {
     // completada.
     // Debe devolver un texto: "✅ Completada" o "⏳ Pendiente".
     // Muestra el resultado de llamar al método con ambos casos.
-    public static void estadoTarea(boolean completada){
-        
+    public static String estadoTarea(boolean completada){
+        if (completada) {
+            return "Completada";
+        } else {
+            return "Pendiente"; 
+        }
     }
+
 
 }       
 
