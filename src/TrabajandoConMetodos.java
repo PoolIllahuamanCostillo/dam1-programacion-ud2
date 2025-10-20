@@ -72,7 +72,7 @@ public class TrabajandoConMetodos {
 // Ejercicio 3: ¿Ha cambiado la variable n fuera del método incrementar()?
 // ¿Por qué?
 // Respuesta: No, la variable no cambia porque es un tipo primitivo y este solo recibe la copia del valor,
-//            pero no es modificable la variable original. Es por eso que dentro del método incrementar() de la clase "DemoMetodos"
+//            pero no se puede modificar la variable original. Es por eso que dentro del método incrementar() de la clase "DemoMetodos"
 //            se incrementa e imprime 6, pero el valor original que está fuera del método de la clase "TrabajandoConMetodos"
 //            sigue siendo 5.
 
